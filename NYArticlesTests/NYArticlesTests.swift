@@ -5,32 +5,42 @@
 //  Created by Taha Hussein on 26/09/2024.
 //
 
+
 import XCTest
 @testable import NYArticles
 
-final class NYArticlesTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class ArticleListViewTests: XCTestCase {
+    
+    var viewModel: NYArticleViewModel!
+    
+    override func setUp() {
+        super.setUp()
+        viewModel = NYArticleViewModel()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        viewModel = nil
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testLoadingState() {
+        // Initially, articles should be nil, simulating loading state
+        XCTAssertNil(viewModel.articles, "ViewModel should be in loading state with nil articles")
+        
+        // You can also add a loading state property if needed
+        // XCTAssertTrue(viewModel.isLoading, "ViewModel should be loading")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testArticleListPopulation() {
+        // Mock articles data
+        let mockArticles = ArticlesResponse(results: [
+            Article(id: 1, uri: "", url: "", source: "", publishedDate: "", updated: "", section: "", subsection: "", nytdSection: "", adxKeywords: "", type: "", title: "Test Article", abstract: "", desFacet: [], orgFacet: [], perFacet: [], geoFacet: [], media: [], etaId: 0)
+        ])
+        
+        // Inject mock articles into the ViewModel
+        viewModel.articles = mockArticles
+        
+        // Assert that articles are populated correctly
+        XCTAssertEqual(viewModel.articles?.results.first?.title, "Test Article", "The article title should be 'Test Article'")
     }
-
 }

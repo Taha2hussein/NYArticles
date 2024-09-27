@@ -7,10 +7,13 @@
 
 import SwiftUI
 
-
 struct ArticleListView: View {
-    @StateObject var viewModel: NYArticleViewModel = NYArticleViewModel()
-
+    @StateObject var viewModel: NYArticleViewModel
+    
+    init(viewModel: NYArticleViewModel = NYArticleViewModel()) {
+        self._viewModel = StateObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         NavigationView {
             CustomNavigationView(

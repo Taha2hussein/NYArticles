@@ -23,12 +23,10 @@ struct GenericAPIResponse<T: Codable>: Codable {
     }
 }
 
-// NYT Articles Response (for handling an array of articles)
 struct ArticlesResponse: Codable {
     let results: [Article]
 }
 
-// Article model
 struct Article: Codable, Identifiable {
     let id: Int
     let uri: String
@@ -73,7 +71,6 @@ struct Article: Codable, Identifiable {
     }
 }
 
-// Media model (nested inside Article)
 struct Media: Codable {
     let type: String
     let subtype: String
@@ -92,7 +89,6 @@ struct Media: Codable {
     }
 }
 
-// MediaMetadata model (nested inside Media)
 struct MediaMetadata: Codable {
     let url: String
     let format: String

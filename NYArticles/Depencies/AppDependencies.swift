@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AppDependencies:  HasNYArticleRepository{
+class AppDependencies:  HasNYArticleRepository {
     var nYArticleRepository: NYArticlRepository
 
     init(nYArticleRepository: NYArticlRepository) {

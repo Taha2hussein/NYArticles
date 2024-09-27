@@ -40,6 +40,8 @@
 		72E3C4292CA5F3190059EE0A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E3C4272CA5F3190059EE0A /* APIError.swift */; };
 		72E3C42A2CA5F3190059EE0A /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E3C4282CA5F3190059EE0A /* BackendError.swift */; };
 		72E3C42F2CA5F3530059EE0A /* JsonUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E3C42C2CA5F3530059EE0A /* JsonUtilities.swift */; };
+		72F04E5D2CA701CC00872D24 /* MockNYArticleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F04E5C2CA701CC00872D24 /* MockNYArticleRepository.swift */; };
+		72F04E5F2CA7026E00872D24 /* NYArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F04E5E2CA7026E00872D24 /* NYArticleViewModel.swift */; };
 		9761BA73449A41E3C16C43D9 /* Pods_NYArticles.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7258739C868FB0E50AE071 /* Pods_NYArticles.framework */; };
 		CCE5CA40762DF4A1A80C6319 /* Pods_NYArticles_NYArticlesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4906AC8ABA1EB20A10E6BFE /* Pods_NYArticles_NYArticlesUITests.framework */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,8 @@
 		72E3C4272CA5F3190059EE0A /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		72E3C4282CA5F3190059EE0A /* BackendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
 		72E3C42C2CA5F3530059EE0A /* JsonUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonUtilities.swift; sourceTree = "<group>"; };
+		72F04E5C2CA701CC00872D24 /* MockNYArticleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNYArticleRepository.swift; sourceTree = "<group>"; };
+		72F04E5E2CA7026E00872D24 /* NYArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYArticleViewModel.swift; sourceTree = "<group>"; };
 		8ACC222D60B8D21E1C9F802A /* Pods-NYArticles-NYArticlesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYArticles-NYArticlesUITests.debug.xcconfig"; path = "Target Support Files/Pods-NYArticles-NYArticlesUITests/Pods-NYArticles-NYArticlesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8E7258739C868FB0E50AE071 /* Pods_NYArticles.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYArticles.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4906AC8ABA1EB20A10E6BFE /* Pods_NYArticles_NYArticlesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYArticles_NYArticlesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				72E3C3E42CA5EC4C0059EE0A /* NYArticlesTests.swift */,
+				72F04E5C2CA701CC00872D24 /* MockNYArticleRepository.swift */,
+				72F04E5E2CA7026E00872D24 /* NYArticleViewModel.swift */,
 			);
 			path = NYArticlesTests;
 			sourceTree = "<group>";
@@ -423,6 +429,8 @@
 				72E3C3E22CA5EC4C0059EE0A /* PBXTargetDependency */,
 			);
 			name = NYArticlesTests;
+			packageProductDependencies = (
+			);
 			productName = NYArticlesTests;
 			productReference = 72E3C3E02CA5EC4C0059EE0A /* NYArticlesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -479,6 +487,8 @@
 				Base,
 			);
 			mainGroup = 72E3C3C22CA5EC4A0059EE0A;
+			packageReferences = (
+			);
 			productRefGroup = 72E3C3CC2CA5EC4A0059EE0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -659,6 +669,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E3C3E52CA5EC4C0059EE0A /* NYArticlesTests.swift in Sources */,
+				72F04E5F2CA7026E00872D24 /* NYArticleViewModel.swift in Sources */,
+				72F04E5D2CA701CC00872D24 /* MockNYArticleRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

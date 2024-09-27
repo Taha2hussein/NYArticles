@@ -6,13 +6,10 @@
 //
 import SwiftUI
 
-import SwiftUI
-
 class NYArticleViewModel: ObservableObject {
     
     @Published var articles: ArticlesResponse?
     @Published var shouldNavigateToDetail = false
-//    var selectedArticle: Article!
     
     private let dependencis: AppDependencies
     
@@ -32,7 +29,6 @@ class NYArticleViewModel: ObservableObject {
     }
     
     func navigateToDetail(article: Article) {
-//        selectedArticle = article
         shouldNavigateToDetail = true
     }
 }
