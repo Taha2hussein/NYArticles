@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum HomeAPIEndPoint {
-    case fetchTopHome
+    case fetchArticles
 }
 
 extension HomeAPIEndPoint: APIEndpoint {
@@ -19,28 +19,29 @@ extension HomeAPIEndPoint: APIEndpoint {
 
     var path: String {
         switch self {
-        case .fetchTopHome:
-            return "mostviewed/all-sections/7.json?api-key=\(EnviromentConfigurations.apiKey.rawValue)"
+        case .fetchArticles:
+            return "mostviewed/all-sections/7.json"
         }
     }
 
     var method: HTTPMethod {
         switch self {
-        case .fetchTopHome:
+        case .fetchArticles:
             return .get
         }
     }
 
     var task: Task {
         switch self {
-        case .fetchTopHome:
-            return .requestPlain
+        case .fetchArticles:
+            let parameter = ["api-key":EnviromentConfigurations.apiKey.rawValue]
+            return .requestParameters(parameters: parameter, encoding: .default)
         }
     }
 
     var headers: [String: String] {
         switch self {
-        case .fetchTopHome:
+        case .fetchArticles:
             return HeadersRequest.shared.getHeaders(type: .normal)
         }
     }

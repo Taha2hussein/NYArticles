@@ -17,6 +17,6 @@ before working on this application i registered on portal i will provide to get 
 11-Replace the sample key in the URL:
 12-Once you have the key, replace the sample-key in the URL:
 
-## i add moya as pod first  run pod install from terminal then
+## i add moya as pod first  run pod install from terminal because i removed it from repos and add it to .gitignore
 
 run application

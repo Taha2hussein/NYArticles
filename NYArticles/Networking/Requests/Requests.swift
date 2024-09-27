@@ -13,8 +13,9 @@ struct NYArticleAPI: NYArticlRepository {
         self.client = client
     }
     
-    func fetchTopHome(callback: @escaping (Result<GenericAPIResponse<NYTArticleList>, APIError>) -> ()) {
-        self.client.performRequest(api: HomeAPIEndPoint.fetchTopHome, decodeTo: GenericAPIResponse<NYTArticleList>.self) { (result) in
+    func fetchArticle(callback: @escaping (Result<ArticlesResponse, APIError>) -> ()) {
+  
+        self.client.performRequest(api: HomeAPIEndPoint.fetchArticles, decodeTo: ArticlesResponse.self) { (result) in
             switch result {
             case .success(let response):
                 callback(.success(response))

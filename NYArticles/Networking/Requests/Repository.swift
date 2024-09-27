@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NYArticlRepository {
-    func fetchTopHome(callback: @escaping (Result<GenericAPIResponse<NYTArticleList>, APIError>) -> ())
+    func fetchArticle(callback: @escaping (Result<ArticlesResponse, APIError>) -> ())
 }
 
 protocol HasNYArticleRepository {
